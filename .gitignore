@@ -9,7 +9,7 @@ tmp/
 .nx/
 
 # Prisma generated client
-libs/db/generated/
+libs/db/src/generated/
 
 # Environment files
 *.env

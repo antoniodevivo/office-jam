@@ -17,6 +17,7 @@
         "tsConfig": "apps/api/tsconfig.app.json",
         "assets": ["apps/api/src/assets"],
         "generatePackageJson": true,
+        "generateLockfile": false,
         "esbuildOptions": {
           "sourcemap": true,
           "outExtension": {
@@ -65,7 +66,6 @@
       "continuous": true,
       "executor": "@nx/js:node",
       "defaultConfiguration": "development",
-      "dependsOn": ["build"],
       "options": {
         "buildTarget": "api:build",
         "runBuildTargetDependencies": false

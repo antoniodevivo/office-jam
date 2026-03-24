@@ -75,5 +75,6 @@
         "linter": "none"
       }
     }
-  }
+  },
+  "analytics": false
 }

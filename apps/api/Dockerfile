@@ -5,11 +5,6 @@ RUN bun install --frozen-lockfile
 COPY . .
 RUN cd libs/db && bunx prisma generate
 RUN bunx nx build api --configuration=production
-RUN bunx tsc --outDir dist/apps/api/libs/db/generated \
-  --rootDir libs/db/generated \
-  --module commonjs --esModuleInterop --skipLibCheck \
-  --moduleResolution node \
-  libs/db/generated/client/*.ts libs/db/generated/client/internal/*.ts
 
 FROM oven/bun:1-alpine AS runner
 WORKDIR /app

@@ -3,7 +3,21 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "bunx nx run-many -t serve --projects=api,web --parallel=2 --output-style=stream",
+    "dev:api": "bunx nx run api:serve:development",
+    "dev:web": "bunx nx run web:dev",
+    "build": "bunx nx run-many -t build",
+    "build:api": "bunx nx run api:build",
+    "build:web": "bunx nx run web:build",
+    "test": "bunx nx run-many -t test",
+    "lint": "bunx nx run-many -t lint",
+    "db:generate": "bunx nx run db:prisma-generate",
+    "db:migrate": "bunx nx run db:prisma-migrate",
+    "db:seed": "bunx nx run db:prisma-seed",
+    "db:push": "bunx nx run db:db-push",
+    "docker:up": "docker compose up -d",
+    "docker:down": "docker compose down",
+    "docker:db": "docker compose up -d db"
   },
   "keywords": [],
   "author": "",
