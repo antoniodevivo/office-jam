@@ -62,6 +62,12 @@
       "dependsOn": ["prune-lockfile", "copy-workspace-modules"],
       "executor": "nx:noop"
     },
+    "test": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "bunx vitest run --config apps/api/vitest.config.mts --reporter=verbose"
+      }
+    },
     "serve": {
       "continuous": true,
       "executor": "@nx/js:node",
