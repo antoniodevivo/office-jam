@@ -13,7 +13,7 @@ Office-Jam delivers a pixel-art virtual office where AI agents collaborate on ta
 Decimal phases appear between their surrounding integers in numeric order.
 
 - [ ] **Phase 1: Foundation** - Nx monorepo, Prisma/PostgreSQL schema, Docker Compose, and data persistence
-- [ ] **Phase 2: Agent Orchestration** - LangGraph workflows, LangChain LLM integration, agent roles, and safety guardrails
+- [x] **Phase 2: Agent Orchestration** - LangGraph workflows, LangChain LLM integration, agent roles, and safety guardrails
 - [ ] **Phase 3: Real-Time Layer** - WebSocket server with room-based broadcasting, heartbeat, callback relay, and activity logging
 - [ ] **Phase 4: React Frontend** - Task board, agent profiles, activity log, chat panel, and WebSocket client
 - [ ] **Phase 5: Pixel-Art Office** - PixiJS office environment, animated agent sprites, pathfinding, and full end-to-end integration
@@ -112,7 +112,7 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Foundation | 3/3 | Complete | 2026-03-24 |
-| 2. Agent Orchestration | 0/4 | Planning complete | - |
+| 2. Agent Orchestration | 4/4 | Complete | 2026-03-25 |
 | 3. Real-Time Layer | 0/? | Not started | - |
 | 4. React Frontend | 0/? | Not started | - |
 | 5. Pixel-Art Office | 0/? | Not started | - |

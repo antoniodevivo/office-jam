@@ -22,7 +22,7 @@ Requirements for initial release. Each maps to roadmap phases.
 - [x] **ORCH-03**: User can assign specialized roles to agents (CEO, CTO, developer, designer, marketing, legal, etc.)
 - [x] **ORCH-04**: User can configure which LLM provider/model powers each agent (OpenAI, Anthropic, Gemini, Ollama local/cloud)
 - [x] **ORCH-05**: Agent execution has loop protection: max iterations, max execution time, and token budget limits
-- [ ] **ORCH-06**: Agent orchestration runs asynchronously -- never blocks the API event loop or WebSocket connections
+- [x] **ORCH-06**: Agent orchestration runs asynchronously -- never blocks the API event loop or WebSocket connections
 - [x] **ORCH-07**: Agent outputs are validated between handoffs (structured output schemas)
 - [x] **ORCH-08**: User can create a task and assign it to one or more agents for collaborative execution
 
@@ -111,7 +111,7 @@ Which phases cover which requirements. Updated during roadmap creation.
 | ORCH-03 | Phase 2 | Complete |
 | ORCH-04 | Phase 2 | Complete |
 | ORCH-05 | Phase 2 | Complete |
-| ORCH-06 | Phase 2 | Pending |
+| ORCH-06 | Phase 2 | Complete |
 | ORCH-07 | Phase 2 | Complete |
 | ORCH-08 | Phase 2 | Complete |
 | RT-01 | Phase 3 | Pending |
