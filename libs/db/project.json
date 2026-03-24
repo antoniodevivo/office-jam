@@ -7,23 +7,23 @@
   "// targets": "to see all targets run: nx show project db --web",
   "targets": {
     "prisma-generate": {
-      "command": "npx prisma generate",
+      "command": "bunx prisma generate",
       "options": { "cwd": "libs/db" }
     },
     "prisma-validate": {
-      "command": "npx prisma validate",
+      "command": "bunx prisma validate",
       "options": { "cwd": "libs/db" }
     },
     "prisma-migrate": {
-      "command": "npx prisma migrate dev",
+      "command": "bunx prisma migrate dev",
       "options": { "cwd": "libs/db" }
     },
     "prisma-seed": {
-      "command": "npx tsx prisma/seed.ts",
+      "command": "bunx tsx prisma/seed.ts",
       "options": { "cwd": "libs/db" }
     },
     "db-push": {
-      "command": "npx prisma db push",
+      "command": "bunx prisma db push",
       "options": { "cwd": "libs/db" }
     }
   }
