@@ -1,9 +1,9 @@
-FROM node:22-alpine AS builder
+FROM oven/bun:1 AS builder
 WORKDIR /app
-COPY package.json package-lock.json ./
-RUN npm ci
+COPY package.json bun.lock ./
+RUN bun install --frozen-lockfile
 COPY . .
-RUN npx nx build web --configuration=production
+RUN bunx nx build web --configuration=production
 
 FROM nginx:alpine AS runner
 COPY --from=builder /app/dist/apps/web /usr/share/nginx/html
