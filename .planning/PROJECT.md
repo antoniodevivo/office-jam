@@ -53,7 +53,10 @@ A single virtual office where you hire AI agents, give them a task, and watch th
 
 ## Constraints
 
-- **Backend**: TypeScript with LangGraph for agent orchestration, LangChain for LLM integration
+- **Monorepo**: Nx workspace for unified TypeScript monorepo
+- **Backend API**: Fastify for HTTP and WebSocket server
+- **Agent orchestration**: TypeScript with LangGraph for stateful graph workflows
+- **LLM integration**: LangChain for multi-provider access
 - **Database**: Prisma ORM with PostgreSQL
 - **Frontend**: Must closely resemble pixel-agents visual style (pixel art, animated agent sprites, office environment)
 - **Deployment**: Docker Compose for local development and execution
@@ -68,6 +71,8 @@ A single virtual office where you hire AI agents, give them a task, and watch th
 | LangChain for LLM integration | User decision — unified multi-provider LLM access | — Pending |
 | Prisma for database | User decision — type-safe ORM, great DX with TypeScript | — Pending |
 | TypeScript full-stack (pivot from Python) | User decision — unified language for frontend + backend | — Pending |
+| Nx monorepo | User decision — structured monorepo management | — Pending |
+| Fastify for backend API | User decision — fast, TypeScript-native HTTP/WebSocket server | — Pending |
 | Pixel-art frontend inspired by pixel-agents | User requirement — visual representation of agents working in offices | — Pending |
 | Configurable LLM per agent | Users need flexibility across providers and cost tiers | — Pending |
 | Docker Compose only (no cloud deploy) | Simplify v1 scope, run everything locally | — Pending |
