@@ -47,12 +47,13 @@ Plans:
   3. Agent execution runs asynchronously and never blocks the Fastify event loop or WebSocket connections
   4. Agent execution respects loop protection: max iterations, max execution time, and token budget limits are enforced
   5. Agent outputs are validated via structured schemas between handoffs so bad output from one agent does not cascade
-**Plans**: TBD
+**Plans**: 4 plans
 
 Plans:
-- [ ] 02-01: TBD
-- [ ] 02-02: TBD
-- [ ] 02-03: TBD
+- [ ] 02-01-PLAN.md -- Schema extensions (OfficeLlmConfig, TaskExecution), encryption service, shared types, vitest setup
+- [ ] 02-02-PLAN.md -- LLM factory, Agent CRUD, Task CRUD, and Office LLM config routes
+- [ ] 02-03-PLAN.md -- LangGraph orchestration engine (state, agent nodes, guardrails, workflow builder)
+- [ ] 02-04-PLAN.md -- Task execution endpoint (async fire-and-forget) and full integration wiring
 
 ### Phase 3: Real-Time Layer
 **Goal**: Agent execution events flow from the backend to connected clients in real time, with reliable connection management and persistent activity history
@@ -110,8 +111,8 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Foundation | 0/3 | Planning complete | - |
-| 2. Agent Orchestration | 0/? | Not started | - |
+| 1. Foundation | 3/3 | Complete | 2026-03-24 |
+| 2. Agent Orchestration | 0/4 | Planning complete | - |
 | 3. Real-Time Layer | 0/? | Not started | - |
 | 4. React Frontend | 0/? | Not started | - |
 | 5. Pixel-Art Office | 0/? | Not started | - |
