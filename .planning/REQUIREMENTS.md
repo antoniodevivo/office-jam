@@ -11,9 +11,9 @@ Requirements for initial release. Each maps to roadmap phases.
 
 - [x] **INFR-01**: Project uses Nx monorepo with TypeScript for frontend and backend
 - [ ] **INFR-02**: Application deploys via single `docker compose up` command
-- [ ] **INFR-03**: PostgreSQL database with Prisma ORM for all application state
+- [x] **INFR-03**: PostgreSQL database with Prisma ORM for all application state
 - [ ] **INFR-04**: All data (agents, tasks, history, office state) survives container restarts via volume mounts
-- [ ] **INFR-05**: Database schema supports multi-office isolation from day one (even though v1 UI shows one office)
+- [x] **INFR-05**: Database schema supports multi-office isolation from day one (even though v1 UI shows one office)
 
 ### Agent Orchestration
 
@@ -103,9 +103,9 @@ Which phases cover which requirements. Updated during roadmap creation.
 |-------------|-------|--------|
 | INFR-01 | Phase 1 | Complete |
 | INFR-02 | Phase 1 | Pending |
-| INFR-03 | Phase 1 | Pending |
+| INFR-03 | Phase 1 | Complete |
 | INFR-04 | Phase 1 | Pending |
-| INFR-05 | Phase 1 | Pending |
+| INFR-05 | Phase 1 | Complete |
 | ORCH-01 | Phase 2 | Pending |
 | ORCH-02 | Phase 2 | Pending |
 | ORCH-03 | Phase 2 | Pending |
