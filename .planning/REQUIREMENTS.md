@@ -1,7 +1,7 @@
 # Requirements: Office-Jam
 
 **Defined:** 2026-03-24
-**Core Value:** A single virtual office where you hire AI agents, give them a task, and watch them collaborate in a pixel-art UI — with the ability to intervene at any point
+**Core Value:** A single virtual office where you hire AI agents, give them a task, and watch them collaborate in a pixel-art UI -- with the ability to intervene at any point
 
 ## v1 Requirements
 
@@ -22,7 +22,7 @@ Requirements for initial release. Each maps to roadmap phases.
 - [ ] **ORCH-03**: User can assign specialized roles to agents (CEO, CTO, developer, designer, marketing, legal, etc.)
 - [ ] **ORCH-04**: User can configure which LLM provider/model powers each agent (OpenAI, Anthropic, Gemini, Ollama local/cloud)
 - [ ] **ORCH-05**: Agent execution has loop protection: max iterations, max execution time, and token budget limits
-- [ ] **ORCH-06**: Agent orchestration runs asynchronously — never blocks the API event loop or WebSocket connections
+- [ ] **ORCH-06**: Agent orchestration runs asynchronously -- never blocks the API event loop or WebSocket connections
 - [ ] **ORCH-07**: Agent outputs are validated between handoffs (structured output schemas)
 - [ ] **ORCH-08**: User can create a task and assign it to one or more agents for collaborative execution
 
@@ -47,7 +47,7 @@ Requirements for initial release. Each maps to roadmap phases.
 - [ ] **PIX-02**: Animated agent sprites with state machine (idle, working, typing, talking, walking)
 - [ ] **PIX-03**: BFS/A* pathfinding on tile grid for agent movement
 - [ ] **PIX-04**: Agent-to-agent visible communication via speech bubbles and delegation indicators
-- [ ] **PIX-05**: EventBus integration — WebSocket events drive sprite state transitions (strict boundary between PixiJS and React)
+- [ ] **PIX-05**: EventBus integration -- WebSocket events drive sprite state transitions (strict boundary between PixiJS and React)
 
 ### Human-in-the-Loop
 
@@ -74,7 +74,7 @@ Deferred to future release. Tracked but not in current roadmap.
 
 - **HITL-03**: Agents can initiate alerts to request human input when blocked
 - **HITL-04**: User can cancel running tasks with in-flight LLM call cleanup
-- **HITL-05**: Decision reasoning traces — expandable "why" per agent action
+- **HITL-05**: Decision reasoning traces -- expandable "why" per agent action
 
 ### Multi-Office
 
@@ -86,12 +86,12 @@ Deferred to future release. Tracked but not in current roadmap.
 
 | Feature | Reason |
 |---------|--------|
-| Cloud hosting / multi-tenant | Local Docker only for v1 — simplify scope |
+| Cloud hosting / multi-tenant | Local Docker only for v1 -- simplify scope |
 | Mobile app | Browser-based only |
 | Billing / payments | No monetization layer in v1 |
-| Voice interaction | Text-based only — massive scope for marginal benefit |
+| Voice interaction | Text-based only -- massive scope for marginal benefit |
 | Fully autonomous agent hiring | Runaway cost risk without user control |
-| Agent personality traits | Gimmick — adds prompt complexity without output benefit |
+| Agent personality traits | Gimmick -- adds prompt complexity without output benefit |
 | Custom office layout editor | Low value vs agent features |
 | SSE fallback | WebSocket sufficient for v1 |
 
@@ -101,41 +101,41 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| INFR-01 | — | Pending |
-| INFR-02 | — | Pending |
-| INFR-03 | — | Pending |
-| INFR-04 | — | Pending |
-| INFR-05 | — | Pending |
-| ORCH-01 | — | Pending |
-| ORCH-02 | — | Pending |
-| ORCH-03 | — | Pending |
-| ORCH-04 | — | Pending |
-| ORCH-05 | — | Pending |
-| ORCH-06 | — | Pending |
-| ORCH-07 | — | Pending |
-| ORCH-08 | — | Pending |
-| RT-01 | — | Pending |
-| RT-02 | — | Pending |
-| RT-03 | — | Pending |
-| RT-04 | — | Pending |
-| UI-01 | — | Pending |
-| UI-02 | — | Pending |
-| UI-03 | — | Pending |
-| UI-04 | — | Pending |
-| UI-05 | — | Pending |
-| PIX-01 | — | Pending |
-| PIX-02 | — | Pending |
-| PIX-03 | — | Pending |
-| PIX-04 | — | Pending |
-| PIX-05 | — | Pending |
-| HITL-01 | — | Pending |
-| HITL-02 | — | Pending |
+| INFR-01 | Phase 1 | Pending |
+| INFR-02 | Phase 1 | Pending |
+| INFR-03 | Phase 1 | Pending |
+| INFR-04 | Phase 1 | Pending |
+| INFR-05 | Phase 1 | Pending |
+| ORCH-01 | Phase 2 | Pending |
+| ORCH-02 | Phase 2 | Pending |
+| ORCH-03 | Phase 2 | Pending |
+| ORCH-04 | Phase 2 | Pending |
+| ORCH-05 | Phase 2 | Pending |
+| ORCH-06 | Phase 2 | Pending |
+| ORCH-07 | Phase 2 | Pending |
+| ORCH-08 | Phase 2 | Pending |
+| RT-01 | Phase 3 | Pending |
+| RT-02 | Phase 3 | Pending |
+| RT-03 | Phase 3 | Pending |
+| RT-04 | Phase 3 | Pending |
+| UI-01 | Phase 4 | Pending |
+| UI-02 | Phase 4 | Pending |
+| UI-03 | Phase 4 | Pending |
+| UI-04 | Phase 4 | Pending |
+| UI-05 | Phase 4 | Pending |
+| HITL-01 | Phase 4 | Pending |
+| PIX-01 | Phase 5 | Pending |
+| PIX-02 | Phase 5 | Pending |
+| PIX-03 | Phase 5 | Pending |
+| PIX-04 | Phase 5 | Pending |
+| PIX-05 | Phase 5 | Pending |
+| HITL-02 | Phase 5 | Pending |
 
 **Coverage:**
 - v1 requirements: 29 total
-- Mapped to phases: 0
-- Unmapped: 29 ⚠️
+- Mapped to phases: 29
+- Unmapped: 0
 
 ---
 *Requirements defined: 2026-03-24*
-*Last updated: 2026-03-24 after initial definition*
+*Last updated: 2026-03-24 after roadmap creation*
