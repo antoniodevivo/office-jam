@@ -1,0 +1,128 @@
+generator client {
+  provider = "prisma-client"
+  output   = "../generated/client"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model Office {
+  id          String     @id @default(uuid())
+  name        String
+  description String?
+  createdAt   DateTime   @default(now())
+  updatedAt   DateTime   @updatedAt
+  agents      Agent[]
+  tasks       Task[]
+  messages    Message[]
+  activities  Activity[]
+}
+
+enum AgentRole {
+  CEO
+  CTO
+  DEVELOPER
+  DESIGNER
+  MARKETING
+  LEGAL
+  CUSTOM
+}
+
+enum TaskStatus {
+  PENDING
+  IN_PROGRESS
+  COMPLETED
+  FAILED
+  CANCELLED
+}
+
+model Agent {
+  id            String     @id @default(uuid())
+  officeId      String
+  office        Office     @relation(fields: [officeId], references: [id], onDelete: Cascade)
+  name          String
+  role          AgentRole
+  systemPrompt  String?
+  llmProvider   String     @default("openai")
+  llmModel      String     @default("gpt-4o")
+  createdAt     DateTime   @default(now())
+  updatedAt     DateTime   @updatedAt
+  tasks         TaskAssignment[]
+  messages      Message[]
+  activities    Activity[]
+
+  @@index([officeId])
+}
+
+model Task {
+  id          String          @id @default(uuid())
+  officeId    String
+  office      Office          @relation(fields: [officeId], references: [id], onDelete: Cascade)
+  title       String
+  description String?
+  status      TaskStatus      @default(PENDING)
+  createdAt   DateTime        @default(now())
+  updatedAt   DateTime        @updatedAt
+  assignments TaskAssignment[]
+  activities  Activity[]
+
+  @@index([officeId])
+  @@index([status])
+}
+
+model TaskAssignment {
+  id        String   @id @default(uuid())
+  taskId    String
+  task      Task     @relation(fields: [taskId], references: [id], onDelete: Cascade)
+  agentId   String
+  agent     Agent    @relation(fields: [agentId], references: [id], onDelete: Cascade)
+  assignedAt DateTime @default(now())
+
+  @@unique([taskId, agentId])
+}
+
+model Message {
+  id        String   @id @default(uuid())
+  officeId  String
+  office    Office   @relation(fields: [officeId], references: [id], onDelete: Cascade)
+  agentId   String?
+  agent     Agent?   @relation(fields: [agentId], references: [id], onDelete: SetNull)
+  content   String
+  role      String   @default("user")
+  createdAt DateTime @default(now())
+
+  @@index([officeId])
+  @@index([agentId])
+}
+
+enum ActivityType {
+  AGENT_CREATED
+  TASK_CREATED
+  TASK_ASSIGNED
+  TASK_STARTED
+  TASK_COMPLETED
+  TASK_FAILED
+  MESSAGE_SENT
+  AGENT_THINKING
+  AGENT_RESPONDING
+  AGENT_DELEGATING
+}
+
+model Activity {
+  id        String       @id @default(uuid())
+  officeId  String
+  office    Office       @relation(fields: [officeId], references: [id], onDelete: Cascade)
+  agentId   String?
+  agent     Agent?       @relation(fields: [agentId], references: [id], onDelete: SetNull)
+  taskId    String?
+  task      Task?        @relation(fields: [taskId], references: [id], onDelete: SetNull)
+  type      ActivityType
+  payload   Json?
+  createdAt DateTime     @default(now())
+
+  @@index([officeId])
+  @@index([agentId])
+  @@index([taskId])
+  @@index([createdAt])
+}
