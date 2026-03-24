@@ -5,3 +5,5 @@ export * from "./types/task.types";
 export * from "./types/message.types";
 export * from "./types/activity.types";
 export * from "./types/ws-events";
+export * from "./types/llm.types";
+export * from "./types/orchestration.types";
