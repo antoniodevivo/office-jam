@@ -3,6 +3,7 @@ import {
   WorkflowOfficeLlmConfig,
 } from "./workflow";
 import { checkGuardrails } from "./guardrails";
+import type { WorkflowStateType } from "./state";
 import { HumanMessage } from "@langchain/core/messages";
 import type { PrismaClient } from "@office-jam/db";
 
@@ -111,7 +112,7 @@ export async function executeTask(params: ExecuteTaskParams): Promise<void> {
 
     // --- POST-INVOCATION GUARDRAIL CHECK ---
     // checkGuardrails inspects the final state to detect if any limit was breached
-    const guardrailResult = checkGuardrails(result);
+    const guardrailResult = checkGuardrails(result as WorkflowStateType);
 
     if (guardrailResult === "continue") {
       // Clean success -- no guardrail breached
