@@ -1,3 +1,4 @@
+import "dotenv/config";
 import { prisma } from "../src/client";
 
 async function main() {
