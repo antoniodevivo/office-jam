@@ -30,11 +30,12 @@ Decimal phases appear between their surrounding integers in numeric order.
   3. Running `docker compose down && docker compose up` preserves all previously created data (agents, tasks, office state)
   4. The database schema isolates data by office ID, supporting multi-office from day one even though v1 shows one office
   5. The Nx monorepo builds both frontend and backend packages from a single workspace with shared TypeScript types
-**Plans**: TBD
+**Plans**: 3 plans
 
 Plans:
-- [ ] 01-01: TBD
-- [ ] 01-02: TBD
+- [ ] 01-01-PLAN.md -- Scaffold Nx monorepo with Fastify API, React frontend, and shared libraries
+- [ ] 01-02-PLAN.md -- Set up Prisma 7 database layer with schema, client singleton, and Fastify plugin
+- [ ] 01-03-PLAN.md -- Create Docker Compose, Dockerfiles, shared domain types, and verify full stack
 
 ### Phase 2: Agent Orchestration
 **Goal**: Users can create agents with specialized roles, configure their LLM providers, assign tasks, and watch agents collaborate through a safe, async orchestration pipeline
@@ -109,7 +110,7 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Foundation | 0/? | Not started | - |
+| 1. Foundation | 0/3 | Planning complete | - |
 | 2. Agent Orchestration | 0/? | Not started | - |
 | 3. Real-Time Layer | 0/? | Not started | - |
 | 4. React Frontend | 0/? | Not started | - |
