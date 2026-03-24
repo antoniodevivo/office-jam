@@ -17,6 +17,7 @@ model Office {
   tasks       Task[]
   messages    Message[]
   activities  Activity[]
+  llmConfig   OfficeLlmConfig?
 }
 
 enum AgentRole {
@@ -66,6 +67,7 @@ model Task {
   updatedAt   DateTime        @updatedAt
   assignments TaskAssignment[]
   activities  Activity[]
+  executions  TaskExecution[]
 
   @@index([officeId])
   @@index([status])
@@ -125,4 +127,33 @@ model Activity {
   @@index([agentId])
   @@index([taskId])
   @@index([createdAt])
+}
+
+model OfficeLlmConfig {
+  id              String   @id @default(uuid())
+  officeId        String   @unique
+  office          Office   @relation(fields: [officeId], references: [id], onDelete: Cascade)
+  defaultProvider String   @default("openai")
+  defaultModel    String   @default("gpt-4o")
+  openaiApiKey    String?
+  anthropicApiKey String?
+  googleApiKey    String?
+  ollamaBaseUrl   String   @default("http://127.0.0.1:11434")
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+}
+
+model TaskExecution {
+  id              String    @id @default(uuid())
+  taskId          String
+  task            Task      @relation(fields: [taskId], references: [id], onDelete: Cascade)
+  status          String    @default("running")
+  iterationCount  Int       @default(0)
+  totalTokensUsed Int       @default(0)
+  result          Json?
+  error           String?
+  startedAt       DateTime  @default(now())
+  completedAt     DateTime?
+
+  @@index([taskId])
 }
