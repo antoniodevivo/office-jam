@@ -33,7 +33,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 **Plans**: 3 plans
 
 Plans:
-- [ ] 01-01-PLAN.md -- Scaffold Nx monorepo with Fastify API, React frontend, and shared libraries
+- [x] 01-01-PLAN.md -- Scaffold Nx monorepo with Fastify API, React frontend, and shared libraries
 - [ ] 01-02-PLAN.md -- Set up Prisma 7 database layer with schema, client singleton, and Fastify plugin
 - [ ] 01-03-PLAN.md -- Create Docker Compose, Dockerfiles, shared domain types, and verify full stack
 

@@ -9,7 +9,7 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Infrastructure
 
-- [ ] **INFR-01**: Project uses Nx monorepo with TypeScript for frontend and backend
+- [x] **INFR-01**: Project uses Nx monorepo with TypeScript for frontend and backend
 - [ ] **INFR-02**: Application deploys via single `docker compose up` command
 - [ ] **INFR-03**: PostgreSQL database with Prisma ORM for all application state
 - [ ] **INFR-04**: All data (agents, tasks, history, office state) survives container restarts via volume mounts
@@ -101,7 +101,7 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| INFR-01 | Phase 1 | Pending |
+| INFR-01 | Phase 1 | Complete |
 | INFR-02 | Phase 1 | Pending |
 | INFR-03 | Phase 1 | Pending |
 | INFR-04 | Phase 1 | Pending |
