@@ -1,6 +1,5 @@
 import { createAgent } from "langchain";
 import type { BaseChatModel } from "@langchain/core/language_models/chat_models";
-import type { CompiledStateGraph } from "@langchain/langgraph";
 
 /**
  * Role-specific system prompts for each agent role.
@@ -37,7 +36,7 @@ export interface AgentNodeConfig {
  *
  * @returns A CompiledStateGraph that can be passed to createSupervisor's agents array
  */
-export function createAgentNode(config: AgentNodeConfig): CompiledStateGraph {
+export function createAgentNode(config: AgentNodeConfig) {
   const { name, role, systemPrompt, model } = config;
 
   const basePrompt = ROLE_PROMPTS[role] ?? ROLE_PROMPTS.CUSTOM;
