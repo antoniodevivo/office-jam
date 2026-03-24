@@ -18,13 +18,13 @@ Requirements for initial release. Each maps to roadmap phases.
 ### Agent Orchestration
 
 - [ ] **ORCH-01**: LangGraph manages agent workflows with stateful graph-based execution
-- [ ] **ORCH-02**: LangChain provides unified LLM access across all supported providers
-- [ ] **ORCH-03**: User can assign specialized roles to agents (CEO, CTO, developer, designer, marketing, legal, etc.)
+- [x] **ORCH-02**: LangChain provides unified LLM access across all supported providers
+- [x] **ORCH-03**: User can assign specialized roles to agents (CEO, CTO, developer, designer, marketing, legal, etc.)
 - [x] **ORCH-04**: User can configure which LLM provider/model powers each agent (OpenAI, Anthropic, Gemini, Ollama local/cloud)
 - [ ] **ORCH-05**: Agent execution has loop protection: max iterations, max execution time, and token budget limits
 - [ ] **ORCH-06**: Agent orchestration runs asynchronously -- never blocks the API event loop or WebSocket connections
 - [ ] **ORCH-07**: Agent outputs are validated between handoffs (structured output schemas)
-- [ ] **ORCH-08**: User can create a task and assign it to one or more agents for collaborative execution
+- [x] **ORCH-08**: User can create a task and assign it to one or more agents for collaborative execution
 
 ### Real-Time Communication
 
@@ -107,13 +107,13 @@ Which phases cover which requirements. Updated during roadmap creation.
 | INFR-04 | Phase 1 | Pending |
 | INFR-05 | Phase 1 | Complete |
 | ORCH-01 | Phase 2 | Pending |
-| ORCH-02 | Phase 2 | Pending |
-| ORCH-03 | Phase 2 | Pending |
+| ORCH-02 | Phase 2 | Complete |
+| ORCH-03 | Phase 2 | Complete |
 | ORCH-04 | Phase 2 | Complete |
 | ORCH-05 | Phase 2 | Pending |
 | ORCH-06 | Phase 2 | Pending |
 | ORCH-07 | Phase 2 | Pending |
-| ORCH-08 | Phase 2 | Pending |
+| ORCH-08 | Phase 2 | Complete |
 | RT-01 | Phase 3 | Pending |
 | RT-02 | Phase 3 | Pending |
 | RT-03 | Phase 3 | Pending |

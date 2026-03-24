@@ -3,15 +3,15 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: executing
-stopped_at: Completed 02-01-PLAN.md
-last_updated: "2026-03-24T22:42:29.000Z"
-last_activity: 2026-03-24 -- Completed 02-01 Data layer foundation (schema, types, encryption, vitest)
+stopped_at: Completed 02-02-PLAN.md
+last_updated: "2026-03-24T22:51:46.000Z"
+last_activity: 2026-03-24 -- Completed 02-02 LLM factory, Agent/Task CRUD, Office LLM config routes
 progress:
   total_phases: 5
   completed_phases: 1
   total_plans: 4
-  completed_plans: 1
-  percent: 25
+  completed_plans: 2
+  percent: 50
 ---
 
 # Project State
@@ -21,33 +21,33 @@ progress:
 See: .planning/PROJECT.md (updated 2026-03-24)
 
 **Core value:** A single virtual office where you hire AI agents, give them a task, and watch them collaborate in a pixel-art UI -- with the ability to intervene at any point
-**Current focus:** Phase 2: Agent Orchestration -- executing plan 02-01 done, 3 remaining
+**Current focus:** Phase 2: Agent Orchestration -- executing plan 02-02 done, 2 remaining
 
 ## Current Position
 
 Phase: 2 of 5 (Agent Orchestration)
-Plan: 1 of 4 in current phase (02-01 done)
+Plan: 2 of 4 in current phase (02-02 done)
 Status: Executing
-Last activity: 2026-03-24 -- Completed 02-01 Data layer foundation (schema, types, encryption, vitest)
+Last activity: 2026-03-24 -- Completed 02-02 LLM factory, Agent/Task CRUD, Office LLM config routes
 
-Progress: [##h.......] 25%
+Progress: [#####.....] 50%
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 4
+- Total plans completed: 5
 - Average duration: ~6min
-- Total execution time: ~0.4 hours
+- Total execution time: ~0.5 hours
 
 **By Phase:**
 
 | Phase | Plans | Total | Avg/Plan |
 |-------|-------|-------|----------|
 | 01-foundation | 3 | ~20min | ~7min |
-| 02-agent-orchestration | 1 | ~5min | ~5min |
+| 02-agent-orchestration | 2 | ~10min | ~5min |
 
 **Recent Trend:**
-- Last 5 plans: 01-01 (6min), 01-02 (5min), 01-03 (~10min), 02-01 (5min)
+- Last 5 plans: 01-02 (5min), 01-03 (~10min), 02-01 (5min), 02-02 (5min)
 - Trend: Stable
 
 *Updated after each plan completion*
@@ -73,6 +73,9 @@ Recent decisions affecting current work:
 - Shared domain types are plain TS interfaces mirroring Prisma models, no Prisma dependency in frontend (01-03)
 - Vitest root set to config directory to resolve relative include/setupFiles paths when run from workspace root (02-01)
 - Encryption format is iv:authTag:data as three colon-separated base64 segments for AES-256-GCM (02-01)
+- Fastify type augmentation for prisma decorator added to db plugin file (02-02)
+- Zod schemas defined inline per route file rather than shared schema library (02-02)
+- Office LLM config returns boolean flags (hasOpenaiKey) instead of raw API keys (02-02)
 
 ### Pending Todos
 
@@ -86,6 +89,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-24T22:42:29.000Z
-Stopped at: Completed 02-01-PLAN.md
-Resume file: .planning/phases/02-agent-orchestration/02-01-SUMMARY.md
+Last session: 2026-03-24T22:51:46.000Z
+Stopped at: Completed 02-02-PLAN.md
+Resume file: .planning/phases/02-agent-orchestration/02-02-SUMMARY.md
